@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="55370bcf-98d2-4a72-80cc-c7799ef04b8e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../../12.Switch/11.Switch.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../14.ParsingValuesFromString/ParsingValuesFromString.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../15.ReadingUserInput/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../15.ReadingUserInput/.idea/description.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../15.ReadingUserInput/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../15.ReadingUserInput/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../15.ReadingUserInput/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../15.ReadingUserInput/.idea/project-template.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../15.ReadingUserInput/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../15.ReadingUserInput/15.ReadingUserInput.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Exercises/DIagonalStar*/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Exercises/DIagonalStar*/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Exercises/DIagonalStar*/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Exercises/DIagonalStar*/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Exercises/DIagonalStar*/DIagonalStar*.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Exercises/DIagonalStar*/src/Description" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Exercises/DIagonalStar*/src/DiagonalStar.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Exercises/DIagonalStar*/src/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Exercises/FlourPackProblem/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Exercises/FlourPackProblem/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Exercises/FlourPackProblem/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Exercises/FlourPackProblem/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Exercises/FlourPackProblem/FlourPackProblem.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Exercises/FlourPackProblem/src/Description" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Exercises/FlourPackProblem/src/FlourPacker.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Exercises/FlourPackProblem/src/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Exercises/FlourPackProblem/src/canPack.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Exercises/InputCalculator/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Exercises/InputCalculator/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Exercises/InputCalculator/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Exercises/InputCalculator/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Exercises/InputCalculator/InputCalculator.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Exercises/InputCalculator/src/Description" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Exercises/InputCalculator/src/InputCalculator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Exercises/InputCalculator/src/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Exercises/LargestPrime/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Exercises/LargestPrime/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Exercises/LargestPrime/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Exercises/LargestPrime/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Exercises/LargestPrime/LargestPrime.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Exercises/LargestPrime/src/Description" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Exercises/LargestPrime/src/LargestPrime.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Exercises/LargestPrime/src/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Exercises/PaintJob/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Exercises/PaintJob/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Exercises/PaintJob/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Exercises/PaintJob/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Exercises/PaintJob/PaintJob.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Exercises/PaintJob/out/production/PaintJob/Description" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Exercises/PaintJob/out/production/PaintJob/Main.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Exercises/PaintJob/out/production/PaintJob/PaintJob.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Exercises/PaintJob/src/Description" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Exercises/PaintJob/src/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Exercises/PaintJob/src/PaintJob.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../MinimumAndMaximumChallenge/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../MinimumAndMaximumChallenge/.idea/description.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../MinimumAndMaximumChallenge/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../MinimumAndMaximumChallenge/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../MinimumAndMaximumChallenge/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../MinimumAndMaximumChallenge/.idea/project-template.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../MinimumAndMaximumChallenge/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../MinimumAndMaximumChallenge/MinimumAndMaximumChallenge.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../MinimumAndMaximumChallenge/src/com/timbuckalka/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/description.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/project-template.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/1.Classes.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/1.Classes/com/timbuckalka/Car.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/1.Classes/com/timbuckalka/Main.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/timbuckalka/Car.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/timbuckalka/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ProblemsAndSolutions/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ProblemsAndSolutions/.idea/description.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ProblemsAndSolutions/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ProblemsAndSolutions/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ProblemsAndSolutions/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ProblemsAndSolutions/.idea/project-template.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ProblemsAndSolutions/ProblemsAndSolutions.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ProblemsAndSolutions/out/production/ProblemsAndSolutions/com/timbuckalka/Main.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ProblemsAndSolutions/src/com/timbuckalka/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../readingUserInputChallenge/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../readingUserInputChallenge/.idea/description.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../readingUserInputChallenge/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../readingUserInputChallenge/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../readingUserInputChallenge/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../readingUserInputChallenge/.idea/project-template.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../readingUserInputChallenge/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../readingUserInputChallenge/out/production/readingUserInputChallenge/com/timbuckalka/Main.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../readingUserInputChallenge/readingUserInputChallenge.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../readingUserInputChallenge/src/com/timbuckalka/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Exercises/ParsingValuesFromString/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Exercises/ParsingValuesFromString/.idea/description.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Exercises/ParsingValuesFromString/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Exercises/ParsingValuesFromString/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Exercises/ParsingValuesFromString/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Exercises/ParsingValuesFromString/.idea/project-template.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Exercises/ParsingValuesFromString/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Exercises/ParsingValuesFromString/ParsingValuesFromString.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Exercises/ParsingValuesFromString/src/com/timbuckalka/Main.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="1gPb365B7MGiR53a0358wbKcnRX" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.Java" />
+  </component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="com.timbuckalka.Main" />
+      <module name="1.Classes" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="1.Classes" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="1.Classes" />
+      <option name="filePath" />
+      <option name="vmParameters" />
+      <option name="alternativeJrePath" />
+      <option name="programParameters" />
+      <option name="passParentEnvs" value="true" />
+      <option name="workingDirectory" />
+      <option name="isAlternativeJrePathEnabled" value="false" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="filePath" />
+      <option name="vmParameters" />
+      <option name="alternativeJrePath" />
+      <option name="programParameters" />
+      <option name="passParentEnvs" value="true" />
+      <option name="workingDirectory" />
+      <option name="isAlternativeJrePathEnabled" value="false" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="55370bcf-98d2-4a72-80cc-c7799ef04b8e" name="Default Changelist" comment="" />
+      <created>1598018974915</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1598018974915</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="1645" y="786" width="530" height="641" key="FileChooserDialogImpl" timestamp="1598023304594">
+      <screen x="0" y="39" width="3840" height="2121" />
+    </state>
+    <state x="1645" y="786" width="530" height="641" key="FileChooserDialogImpl/0.39.3840.2121/3840.0.1680.1050@0.39.3840.2121" timestamp="1598023304594" />
+    <state width="3784" height="613" key="GridCell.Tab.0.bottom" timestamp="1598023330689">
+      <screen x="0" y="39" width="3840" height="2121" />
+    </state>
+    <state width="3784" height="613" key="GridCell.Tab.0.bottom/0.39.3840.2121/3840.0.1680.1050@0.39.3840.2121" timestamp="1598023330689" />
+    <state width="3784" height="613" key="GridCell.Tab.0.center" timestamp="1598023330689">
+      <screen x="0" y="39" width="3840" height="2121" />
+    </state>
+    <state width="3784" height="613" key="GridCell.Tab.0.center/0.39.3840.2121/3840.0.1680.1050@0.39.3840.2121" timestamp="1598023330689" />
+    <state width="3784" height="613" key="GridCell.Tab.0.left" timestamp="1598023330689">
+      <screen x="0" y="39" width="3840" height="2121" />
+    </state>
+    <state width="3784" height="613" key="GridCell.Tab.0.left/0.39.3840.2121/3840.0.1680.1050@0.39.3840.2121" timestamp="1598023330689" />
+    <state width="3784" height="613" key="GridCell.Tab.0.right" timestamp="1598023330689">
+      <screen x="0" y="39" width="3840" height="2121" />
+    </state>
+    <state width="3784" height="613" key="GridCell.Tab.0.right/0.39.3840.2121/3840.0.1680.1050@0.39.3840.2121" timestamp="1598023330689" />
+    <state x="1269" y="647" width="1301" height="912" key="SettingsEditor" timestamp="1598019917675">
+      <screen x="0" y="39" width="3840" height="2121" />
+    </state>
+    <state x="1269" y="647" width="1301" height="912" key="SettingsEditor/0.39.3840.2121/3840.0.1680.1050@0.39.3840.2121" timestamp="1598019917675" />
+    <state x="981" y="614" width="1868" height="978" key="new project wizard" timestamp="1598023328662">
+      <screen x="0" y="39" width="3840" height="2121" />
+    </state>
+    <state x="981" y="614" width="1868" height="978" key="new project wizard/0.39.3840.2121/3840.0.1680.1050@0.39.3840.2121" timestamp="1598023328662" />
+  </component>
+</project>

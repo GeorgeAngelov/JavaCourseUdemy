@@ -1,0 +1,20 @@
+Create am method called getDurationString with two parameters,
+first parameter minutes and 2nd parameter seconds.
+
+You should validate that the 1st parameter minutes is >= 0.
+You should validate that the 2nd parameter seconds is >= 0 and <=59.
+the method should return "Invalid Value" in the method if either of the above are not true.
+
+If the parameters are valid then calculate how many hours, minutes and
+seconds equal the minutes and seconds passed to this
+method and return that value as string in format "XXh YYm ZZs".
+
+Create a 2nd method of the same name but with only one parameter seconds.
+
+Validate that it is >=0, and return "Invalid value" if it is not true.
+
+If it is valid, calculate how many minutes are in the seconds value and the call
+the other overloaded method passing the correct minutes and seconds calculated so
+that it can calculate correctly.
+
+Call both methods to print values to the console.
