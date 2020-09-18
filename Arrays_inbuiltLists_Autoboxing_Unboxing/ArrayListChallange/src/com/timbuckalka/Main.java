@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Main {
     private static Scanner scanner = new Scanner(System.in);
-    private MobilePhone mobilePhone = new MobilePhone();
+   // private MobilePhone mobilePhone = new MobilePhone();
 
     public static void main(String[] args) {
         // Create a program that implements a simple mobile phone with the following capabilities.
