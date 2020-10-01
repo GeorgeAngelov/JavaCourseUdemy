@@ -88,12 +88,12 @@ public class Main {
                         }
                         forward = true;
                     }
-                        if (listIterator.hasNext()) {
-                            System.out.println("Now playing " + listIterator.next().toString());
-                        } else {
-                            System.out.println("We have reached the edn of the playlist!");
-                            forward = false;
-                        }
+                    if (listIterator.hasNext()) {
+                        System.out.println("Now playing " + listIterator.next().toString());
+                    } else {
+                        System.out.println("We have reached the edn of the playlist!");
+                        forward = false;
+                    }
                     break;
                 case 2:
                     if (forward){
