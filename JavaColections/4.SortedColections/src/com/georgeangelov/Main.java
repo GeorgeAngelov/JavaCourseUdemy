@@ -46,6 +46,7 @@ public class Main {
         }
 
         Basket georgesBasket = new Basket("George");
+
         sellItem(georgesBasket,"car",1);
         System.out.println(georgesBasket);
 
@@ -56,25 +57,53 @@ public class Main {
             System.out.println("There are no more cars");
         }
         sellItem(georgesBasket,"spanner",5);
-        System.out.println(georgesBasket);
+ //       System.out.println(georgesBasket);
 
         sellItem(georgesBasket,"juice",4);
         sellItem(georgesBasket,"cup",12);
         sellItem(georgesBasket,"bread",1);
-        System.out.println(georgesBasket);
+//        System.out.println(georgesBasket);
 
-        System.out.println(stockList);
+//        System.out.println(stockList);
 
 //        temp = new StockItem("pen",1.12);
 //        stockList.Items().put(temp.getName(), temp);
+        Basket basket = new Basket("customer");
+        sellItem(basket,"cup",100);
+        sellItem(basket,"juice",5);
+        removeItem(basket,"cup",1);
+        System.out.println(basket);
+
+        removeItem(georgesBasket,"car",1);
+        removeItem(georgesBasket,"cup",9);
+        removeItem(georgesBasket,"car",1);
+        System.out.println("cars removed: " + removeItem(georgesBasket,"car",1)); //should not remove any
+
+        System.out.println(georgesBasket);
+
+        //remove all items from georgesBasket
+        removeItem(georgesBasket,"bread",1);
+        removeItem(georgesBasket,"cup",3);
+        removeItem(georgesBasket,"juice",4);
+        removeItem(georgesBasket,"cup",3);
+        System.out.println(georgesBasket);
+
+        System.out.println("\nDisplay Stock List before and after checkout");
+        System.out.println(basket);
+        System.out.println(stockList);
+        checkOut(basket);
+        System.out.println(basket);
+        System.out.println(stockList);
 
         stockList.Items().get("car").adjustStock(2000);
         stockList.get("car").adjustStock(-1000);
         System.out.println(stockList);
 
-        for (Map.Entry<String,Double> price : stockList.PriceList().entrySet()){
-            System.out.println(price.getKey() + " cost " + price.getValue());
-        }
+//        for (Map.Entry<String,Double> price : stockList.PriceList().entrySet()){
+//            System.out.println(price.getKey() + " cost " + price.getValue());
+//        }
+        checkOut(georgesBasket);
+        System.out.println(georgesBasket);
     }
 
     public static int sellItem(Basket basket,String item, int quantity){
@@ -84,10 +113,29 @@ public class Main {
             System.out.println("We don`t sell " + item);
             return 0;
         }
-        if(stockList.sellStock(item,quantity) != 0){
-            basket.addToBasket(stockItem,quantity);
-            return quantity;
+        if(stockList.reserveStock(item,quantity) != 0){
+            return basket.addToBasket(stockItem,quantity);
         }
         return 0;
+    }
+
+    public static int removeItem(Basket basket,String item, int quantity){
+        //retreve the item from the stock list
+        StockItem stockItem = stockList.get(item);
+        if(stockItem == null){
+            System.out.println("We don`t sell " + item);
+            return 0;
+        }
+        if(basket.removeFromBasket(stockItem,quantity) == quantity){
+            return stockList.unreserveStock(item,quantity);
+        }
+        return 0;
+    }
+
+    public static void checkOut(Basket basket){
+        for (Map.Entry<StockItem,Integer> item : basket.Items().entrySet()){
+            stockList.sellStock(item.getKey().getName(),item.getValue());
+        }
+        basket.clearBasket();
     }
 }
