@@ -5,116 +5,78 @@ import java.util.NoSuchElementException;
 
 public class ArrayDeque implements IQueue {
 
-    String[] que;
+    private String[] que;
 
     public ArrayDeque() {
-        this.que = new String[10];
+        this.que = new String[5];
+    }
+
+    private String[] extendArray(){
+        String[] temp = new String[que.length*2];
+        for (int i = 0;i< que.length;i++){
+            temp[i] = que[i];
+        }
+        que = new String[temp.length*2];
+        for (int i = 0; i < temp.length; i++) {
+            que[i] = temp[i];
+        }
+        return que;
+    }
+
+    private String[] shiftItems(){
+        String [] temp = new String[que.length];
+        int counter = 0;
+        for (int i = 0;i<que.length;i++){
+            if (que[i]!=null){
+                temp[counter] = que[i];
+                counter++;
+            }
+        }
+        return temp;
     }
 
     @Override
     public String poll() {
-        String temp = null;
-        for (int i=0;i<= que.length-1;i++){
-            if (que[i]!=null){
-                temp=que[i];
-                que[i]=null;
-                return temp;
-            }
+//        for (int i = 0;i<= que.length;i++){
+//            if (que[i]==null){
+//                que = shiftItems();
+//            }
+//            if (que[i]!= null){
+//                String temp = que[i];
+//                que[i]= null;
+//                que = shiftItems();
+//                return temp;
+//            }
+//        }
+        String temp = que[0];
+        if (que[0]==null){
+                que = shiftItems();
         }
-        return null;
-    }
+        que[0] = null;
+        que = shiftItems();
 
-    @Override
-    public String element() {
-        for (int i=0;i<= que.length-1;i++){
-            if (que[i]!=null){
-                return que[i];
-            }
-        }
-        throw new NoSuchElementException();
-    }
-
-    @Override
-    public void remove() {
-        boolean isRemoved=false;
-        for (int i=0;i<= que.length-1;i++){
-            if (que[i]!=null){
-                que[i]=null;
-                isRemoved = true;
-                break;
-            }
-        }
-        if (!isRemoved){
-            throw new NoSuchElementException();
-        }
+        return temp;
     }
 
     @Override
     public String peek() {
-        for (int i=0;i<= que.length-1;i++){
-            if (que[i]!=null){
-                return que[i];
-            }
+        if (que[0]!=null){
+            return que[0];
         }
         return null;
     }
 
     @Override
-    public void add(String element) {
-        boolean possible = false;
-        for (int i = 0;i<que.length;i++){
-            if (que[i]==null){
-                que[i]=element;
-                possible=true;
-                break;
-            }
-        }
-        if (!possible){
-            throw new IllegalStateException();
-        }
-    }
-
-    @Override
-    public void clear() {
-        for (int i=0;i<= que.length-1;i++){
-            if (que[i]!=null){
-               que[i]=null;
-            }
-        }
-    }
-
-    @Override
-    public int size() {
-        int counter=0;
-        for (int i=0;i< que.length;i++){
-            if (que[i]!=null){
-                counter++;
-            }
-        }
-        return counter;
-    }
-
-    @Override
-    public boolean contains(String element) {
-        for (int i=0;i<= que.length-1;i++){
-            if (element.equals(que[i])){
+    public boolean offer(String element) {
+        for (int i = 0;i<= que.length;i++){
+            if ((i== que.length-1) && (que[i] != null)){
+                extendArray();
+            }else if (que[i] == null){
+                que[i] = element;
                 return true;
             }
         }
         return false;
-    }
-
-    @Override
-    public boolean offer(String element) {
-        boolean possible = false;
-        for (int i = que.length-1;i>=0;i--){
-            if (que[i]==null){
-                que[i]=element;
-                possible=true;
-                break;
-            }
-        }
-        return possible;
     }
 
     @Override
