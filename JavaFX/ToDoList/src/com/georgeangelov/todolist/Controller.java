@@ -1,19 +1,25 @@
 package com.georgeangelov.todolist;
 
+import com.georgeangelov.todolist.datamodel.ToDoData;
 import com.georgeangelov.todolist.datamodel.ToDoItem;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
-import javafx.scene.control.Label;
-import javafx.scene.control.ListView;
-import javafx.scene.control.SelectionMode;
-import javafx.scene.control.TextArea;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.control.*;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyEvent;
+import javafx.scene.layout.BorderPane;
+import javafx.scene.paint.Color;
+import javafx.util.Callback;
 
+import java.io.IOException;
 import java.time.LocalDate;
-import java.time.Month;
 import java.time.format.DateTimeFormatter;
-import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 public class Controller {
     private List<ToDoItem> toDoItems;
@@ -23,25 +29,23 @@ public class Controller {
     private TextArea itemDetailsArea;
     @FXML
     private Label deadlineLabel;
+    @FXML
+    private BorderPane mainBorderPane;
+    @FXML
+    private ContextMenu listContextMenu;
+
     public void initialize(){
-        ToDoItem item1 = new ToDoItem("Mail birthday card for John","Buy a 30th birthdaycard for John",
-                LocalDate.of(2020, Month.APRIL,25));
-        ToDoItem item2 = new ToDoItem("Doctors appointment","See doctor smith at 123 Main Street. Bring paperwork",
-                LocalDate.of(2020, Month.MAY,23));
-        ToDoItem item3 = new ToDoItem("Finish design proposal for client","I promised Mike I`d email website mockups by Friday 22nd April",
-                LocalDate.of(2020, Month.APRIL,22));
-        ToDoItem item4 = new ToDoItem("Pick up Dug at the train station","Dug is arriving on March 23 on the 5:00 train ",
-                LocalDate.of(2020, Month.MARCH,23));
-        ToDoItem item5 = new ToDoItem("Pick up dry cleaning","The clothes should be ready by Wednesday",
-                LocalDate.of(2020, Month.APRIL,20));
+        listContextMenu = new ContextMenu();
+        MenuItem deleteMenuItem = new MenuItem("Delete");
+        deleteMenuItem.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent actionEvent) {
+                ToDoItem item = toDoListView.getSelectionModel().getSelectedItem();
+                deleteItem(item);
+            }
+        });
 
-        toDoItems = new ArrayList<>();
-        toDoItems.add(item1);
-        toDoItems.add(item2);
-        toDoItems.add(item3);
-        toDoItems.add(item4);
-        toDoItems.add(item5);
-
+        listContextMenu.getItems().addAll(deleteMenuItem);
         toDoListView.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<ToDoItem>() {
             @Override
             public void changed(ObservableValue<? extends ToDoItem> observableValue, ToDoItem oldValue, ToDoItem newValue) {
@@ -53,9 +57,66 @@ public class Controller {
                 }
             }
         });
-        toDoListView.getItems().setAll(toDoItems);
+        toDoListView.setItems(ToDoData.getInstance().getToDoItems());
         toDoListView.getSelectionModel().setSelectionMode(SelectionMode.SINGLE);
         toDoListView.getSelectionModel().selectFirst();
+
+        toDoListView.setCellFactory(new Callback<ListView<ToDoItem>, ListCell<ToDoItem>>() {
+            @Override
+            public ListCell<ToDoItem> call(ListView<ToDoItem> toDoItemListView) {
+                ListCell<ToDoItem> cell = new ListCell<>(){
+                    @Override
+                    protected void updateItem(ToDoItem item, boolean empty) {
+                        super.updateItem(item, empty);
+                        if(empty){
+                            setText(null);
+                        }else {
+                            setText(item.getShortDescritiption());
+                            if (item.getDeadline().isBefore(LocalDate.now().plusDays(1))){
+                                setTextFill(Color.RED);
+                            }else if(item.getDeadline().equals(LocalDate.now().plusDays(1))){
+                                setTextFill(Color.BROWN);
+                            }
+                        }
+                    }
+                };
+                cell.emptyProperty().addListener(
+                        (obs, wasEmpty, isNowEmpty) ->{
+                            if (isNowEmpty){
+                                cell.setContextMenu(null);
+                            }else {
+                                cell.setContextMenu(listContextMenu);
+                            }
+                        }
+                );
+                return cell;
+            }
+        });
+    }
+    @FXML
+    public void showNewItemDialog(){
+        Dialog<ButtonType> dialog = new Dialog<>();
+        dialog.initOwner(mainBorderPane.getScene().getWindow());
+        dialog.setTitle("Add new Todo Item");
+        dialog.setHeaderText("Use this dialod to create a new todo item");
+        FXMLLoader fxmlLoader = new FXMLLoader();
+        fxmlLoader.setLocation(getClass().getResource("todoItemDialog.fxml"));
+        try {
+            dialog.getDialogPane().setContent(fxmlLoader.load());
+        }catch (IOException e){
+            System.out.println("Couldn`t load dialog");
+            e.printStackTrace();;
+            return;
+        }
+        dialog.getDialogPane().getButtonTypes().add(ButtonType.OK);
+        dialog.getDialogPane().getButtonTypes().add(ButtonType.CLOSE);
+
+        Optional<ButtonType> result = dialog.showAndWait();
+        if (result.isPresent() && result.get() == ButtonType.OK){
+            DialogController controller = fxmlLoader.getController();
+            ToDoItem newItem = controller.processResults();
+            toDoListView.getSelectionModel().select(newItem);
+        }
 
     }
     @FXML
@@ -63,14 +124,26 @@ public class Controller {
         ToDoItem item = toDoListView.getSelectionModel().getSelectedItem();
         itemDetailsArea.setText(item.getDetails());
         deadlineLabel.setText(item.getDeadline().toString());
-//        System.out.println("The selected item is " + item);
-//        StringBuilder sb = new StringBuilder("The selected item is " + item);
-//        itemDetailsArea.setText(item.getDetails());
-//        sb.append("\n\n\n\n");
-//        sb.append("Due: ");
-//        sb.append(item.getDeadline().toString());
-//        itemDetailsArea.setText(sb.toString());
+    }
 
+    @FXML
+    public void handleKeyPressed(KeyEvent keyEvent){
+        ToDoItem selectedItem = toDoListView.getSelectionModel().getSelectedItem();
+        if (selectedItem != null){
+            if (keyEvent.getCode().equals(KeyCode.DELETE)){
+                deleteItem(selectedItem);
+            }
+        }
+    }
 
+    public void deleteItem(ToDoItem item){
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+        alert.setTitle("Delete Todo Item");
+        alert.setHeaderText("Delete item " + item.getShortDescritiption());
+        alert.setContentText("Are you sure? Press OK to confirm, or cancel to go Back out.");
+        Optional<ButtonType> result = alert.showAndWait();
+        if (result.isPresent() && (result.get() == ButtonType.OK)){
+            ToDoData.getInstance().deleteTodoItem(item);
+        }
     }
 }
